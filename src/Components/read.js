@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-export class Header extends Component {
+export class Read extends Component {
     render() {
         return (
-            <div id="header">
-                <h1>Header Component</h1>
+            <div id="read">
+                <h1>Read Component</h1>
             </div>
 
         );

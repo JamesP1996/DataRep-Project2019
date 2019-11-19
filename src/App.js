@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import { Header } from "./Components/header";
-import { Footer } from "./Components/footer";
+import { Header, Read } from "./Components/read";
+import { Footer, Create } from "./Components/create";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav } from 'react-bootstrap';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -30,8 +30,8 @@ function App() {
         <Switch>
 
           <Route path='/' component={Home} exact />
-          <Route exact path='/create' component={Footer} />
-          <Route path='/read' component={Header} />
+          <Route exact path='/create' component={Create} />
+          <Route path='/read' component={Read} />
 
         </Switch>
       </div>
