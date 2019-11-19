@@ -21,6 +21,13 @@
   color: #09d3ac;
 }
 
+.body{
+  background-image: url("./Assets/bg.jpg") ;
+}
+.main-div{
+  background-color: white;
+}
 #navbar-custom{
-  background-color: maroon !important;
+  background-color: maroon !important; 
+
 }

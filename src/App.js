@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav } from 'react-bootstrap';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Home } from './Components/home';
+import icon from './Assets/navIcon.png'
 
 
 function App() {
@@ -16,15 +17,16 @@ function App() {
 
         <Navbar id="navbar-custom" variant="dark">
           <Nav className="mr-auto">
+            <img src={icon} height="40" width="40"></img>
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/read">read</Nav.Link>
-            <Nav.Link href="/create">create</Nav.Link>
+            <Nav.Link href="/read">Read</Nav.Link>
+            <Nav.Link href="/create">Create</Nav.Link>
 
 
 
           </Nav>
         </Navbar>
-        <br />
+
         <Switch>
 
           <Route path='/' component={Home} exact />
