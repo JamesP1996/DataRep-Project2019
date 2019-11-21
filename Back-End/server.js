@@ -69,7 +69,7 @@ app.get('/api/games/:id', (req, res) => {
 
 // Handle Delete Request
 app.delete('/api/games/:id', (req, res) => {
-    console.log("Deleted" + req.params.id + req.body.title);
+    console.log("Deleted Game ID ::" + req.params.id);
 
     GameModel.deleteOne({ _id: req.params.id },
         (error, data) => {

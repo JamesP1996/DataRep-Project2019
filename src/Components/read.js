@@ -1,6 +1,8 @@
 import React from "react";
 import Games from './games'
 import axios from 'axios';
+import '../App.css';
+
 
 export class Read extends React.Component {
 
@@ -23,9 +25,12 @@ export class Read extends React.Component {
     render() {
         return (
             <div id="read">
-                <h1>Read Component</h1>
-                <Games myGames={this.state.games}></Games>
-            </div>
+                <h1><b>Game Reviews!!</b></h1>
+                <div id="readData">
+                    <Games myGames={this.state.games}></Games>
+                </div>
+
+            </div >
 
         );
     }

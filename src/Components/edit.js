@@ -1,9 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-const radioStyle = {
 
-};
 class Edit extends React.Component {
     constructor(props) {
         super(props);
@@ -91,7 +89,7 @@ class Edit extends React.Component {
     render() {
         return (
             <div>
-                <h1>Edit Component</h1>
+                <h1>Create Component</h1>
                 <form onSubmit={this.handleSubmit}>
 
                     {/* Game Title */}
@@ -138,42 +136,16 @@ class Edit extends React.Component {
                         ></textarea>
                     </div>
 
-                    {/* Game Rating Radio */}
-                    <div className="radio" style={radioStyle}>
-                        <label>
-                            <input type="radio" value="1"
-                                checked={this.state.selectedOption === "1"}
-                                onChange={this.handleGameRatingChange} />
-                            1 <img src={starpic}>{" "}</img>
-
-                        </label>
-                        <label>
-                            <input type="radio" value="2"
-                                checked={this.state.selectedOption === "2"}
-                                onChange={this.handleGameRatingChange} />
-                            2 <img src={starpic}>{" "}</img>
-
-                        </label>
-                        <label>
-                            <input type="radio" value="3"
-                                checked={this.state.selectedOption === "3"}
-                                onChange={this.handleGameRatingChange} />
-                            3 <img src={starpic}>{" "}</img>
-
-                        </label>
-                        <label>
-                            <input type="radio" value="4"
-                                checked={this.state.selectedOption === "4"}
-                                onChange={this.handleGameRatingChange} />
-                            4 <img src={starpic}>{" "}</img>
-
-                        </label>
-                        <label>
-                            <input type="radio" value="5"
-                                checked={this.state.selectedOption === "5"}
-                                onChange={this.handleGameRatingChange} />
-                            5 <img src={starpic}>{" "}</img>
-
+                    {/* Game Rating Select */}
+                    <div className='form-group'>
+                        <label>Game Rating
+                    <select id="rating" name="rating" value={this.state.value} onChange={this.handleGameRatingChange}>
+                                <option value='1' className='form-control'>1</option>
+                                <option value='2' className='form-control'>2</option>
+                                <option value='3' className='form-control'>3</option>
+                                <option value='4' className='form-control'>4</option>
+                                <option value='5' className='form-control'>5</option>
+                            </select>
                         </label>
                     </div>
 

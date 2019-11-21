@@ -31,7 +31,37 @@
   background-color: maroon !important; 
 
 }
-
-.radio{
+#read{
+  background: url("./Assets/bg.jpg");
+  background-repeat: repeat-y;
+}
+#readData{
+  display:  inline-flex;
   padding: 5px;
+  
+}
+
+#covers{
+  
+  max-width:300px;
+  max-height:250px;
+  width: auto;
+  height: auto;
+}
+
+#Card{
+  background-color: crimson;
+  color: white;
+  background: linear-gradient(to top, #ed213a, #93291e); 
+  font-style: normal;
+  font-size: 20px;
+}
+#rate{
+  height: 1.5rem;
+ 
+}
+#span{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ 
+  
 }

@@ -1,7 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import Glyphicon from 'react-bootstrap';
-
 
 export class Create extends React.Component {
     constructor(props) {
@@ -41,6 +39,7 @@ export class Create extends React.Component {
 
     handleGameRatingChange(e) {
         this.setState({ Rating: e.target.value });
+
     }
 
     handleSubmit(e) {
@@ -53,7 +52,7 @@ export class Create extends React.Component {
             year: this.state.Year,
             cover: this.state.Cover,
             review: this.state.Review,
-            rating: this.state.rating
+            rating: this.state.Rating
         };
         axios.post('http://localhost:4000/api/games', newGame)
             .then()
@@ -121,14 +120,15 @@ export class Create extends React.Component {
 
                     {/* Game Rating Select */}
                     <div className='form-group'>
-                        <label>Game Rating</label>
-                        <select>
-                            <option value='1' onChange={this.handleGameRatingChange} className='form-control'>1</option>
-                            <option value='2' onChange={this.handleGameRatingChange} className='form-control'>2</option>
-                            <option value='3' onChange={this.handleGameRatingChange} className='form-control'>3</option>
-                            <option value='4' onChange={this.handleGameRatingChange} className='form-control'>4</option>
-                            <option value='5' onChange={this.handleGameRatingChange} className='form-control'>5</option>
-                        </select>
+                        <label>Game Rating
+                        <select id="rating" name="rating" value={this.state.value} onChange={this.handleGameRatingChange}>
+                                <option value='1' className='form-control'>1</option>
+                                <option value='2' className='form-control'>2</option>
+                                <option value='3' className='form-control'>3</option>
+                                <option value='4' className='form-control'>4</option>
+                                <option value='5' className='form-control'>5</option>
+                            </select>
+                        </label>
                     </div>
 
                     {/* Game Submit */}
