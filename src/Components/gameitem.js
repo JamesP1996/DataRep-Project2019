@@ -3,19 +3,22 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-
+import starpic from '../Assets/Star.png'
 
 class GameItem extends React.Component {
+
+
 
     constructor() {
         super();
         this.DeleteGame = this.DeleteGame.bind(this);
     }
 
+
     DeleteGame(e) {
         console.log("Deleting" + this.props.game._id);
         axios.delete("http://localhost:4000/api/games/" + this.props.game._id)
-            .then()
+            .then(window.location.reload(false))
             .catch(console.log("Game Item Could not Be Deleted"));
 
     }
@@ -30,8 +33,9 @@ class GameItem extends React.Component {
                             <img src={this.props.game.cover}></img>
                             <p>{this.props.game.review}</p>
                             <footer>
-                                Release Year : {this.props.game.year}
-                                Rating out of 5: {this.props.game.rating}
+                                <b>Release Year:</b> {this.props.game.year}
+                                <br></br>
+                                <b>Rating out of 5:</b> {this.props.game.rating} <img src={starpic}></img>
                             </footer>
                         </blockquote>
                     </Card.Body>

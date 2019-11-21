@@ -1,6 +1,6 @@
 import React from "react";
 import Games from './games'
-import { log } from "util";
+import axios from 'axios';
 
 export class Read extends React.Component {
 

@@ -1,5 +1,7 @@
 import React from 'react';
 import axios from 'axios';
+import Glyphicon from 'react-bootstrap';
+
 
 export class Create extends React.Component {
     constructor(props) {
@@ -72,6 +74,8 @@ export class Create extends React.Component {
             <div>
                 <h1>Create Component</h1>
                 <form onSubmit={this.handleSubmit}>
+
+                    {/* Game Title */}
                     <div className='form-group'>
                         <label>Game Title</label>
                         <input
@@ -81,6 +85,8 @@ export class Create extends React.Component {
                             onChange={this.handleGameTitleChange}
                         ></input>
                     </div>
+
+                    {/* Game Year */}
                     <div className='form-group'>
                         <label>Game Year</label>
                         <input
@@ -90,6 +96,8 @@ export class Create extends React.Component {
                             onChange={this.handleGameYearChange}
                         ></input>
                     </div>
+
+                    {/* Game Cover */}
                     <div className='form-group'>
                         <label>Game Cover</label>
                         <textarea
@@ -99,6 +107,8 @@ export class Create extends React.Component {
                             onChange={this.handleGameCoverChange}
                         ></textarea>
                     </div>
+
+                    {/* Game Review */}
                     <div className='form-group'>
                         <label>Game Review</label>
                         <textarea
@@ -108,52 +118,27 @@ export class Create extends React.Component {
                             onChange={this.handleGameReviewChange}
                         ></textarea>
                     </div>
-                    <div className="radio">
-                        <label>
-                            <input type="radio" value="1"
-                                checked={this.state.selectedOption === "1"}
-                                onChange={this.handleGameRatingChange} />
-                            1 Star
-                        </label>
+
+                    {/* Game Rating Select */}
+                    <div className='form-group'>
+                        <label>Game Rating</label>
+                        <select>
+                            <option value='1' onChange={this.handleGameRatingChange} className='form-control'>1</option>
+                            <option value='2' onChange={this.handleGameRatingChange} className='form-control'>2</option>
+                            <option value='3' onChange={this.handleGameRatingChange} className='form-control'>3</option>
+                            <option value='4' onChange={this.handleGameRatingChange} className='form-control'>4</option>
+                            <option value='5' onChange={this.handleGameRatingChange} className='form-control'>5</option>
+                        </select>
                     </div>
-                    <div className="radio">
-                        <label>
-                            <input type="radio" value="2"
-                                checked={this.state.selectedOption === "2"}
-                                onChange={this.handleGameRatingChange} />
-                            2 Star
-                        </label>
-                    </div>
-                    <div className="radio">
-                        <label>
-                            <input type="radio" value="3"
-                                checked={this.state.selectedOption === "3"}
-                                onChange={this.handleGameRatingChange} />
-                            3 Star
-                        </label>
-                    </div>
-                    <div className="radio">
-                        <label>
-                            <input type="radio" value="4"
-                                checked={this.state.selectedOption === "4"}
-                                onChange={this.handleGameRatingChange} />
-                            4 Star
-                        </label>
-                    </div>
-                    <div className="radio">
-                        <label>
-                            <input type="radio" value="5"
-                                checked={this.state.selectedOption === "5"}
-                                onChange={this.handleGameRatingChange} />
-                            5 Star
-                        </label>
-                    </div>
+
+                    {/* Game Submit */}
                     <div>
                         <input
                             type="submit"
                             value="Add Game"
                         ></input>
                     </div>
+
                 </form>
             </div>
         );

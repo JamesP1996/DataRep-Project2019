@@ -1,7 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 
+const radioStyle = {
 
+};
 class Edit extends React.Component {
     constructor(props) {
         super(props);
@@ -91,6 +93,8 @@ class Edit extends React.Component {
             <div>
                 <h1>Edit Component</h1>
                 <form onSubmit={this.handleSubmit}>
+
+                    {/* Game Title */}
                     <div className='form-group'>
                         <label>Game Title</label>
                         <input
@@ -100,6 +104,8 @@ class Edit extends React.Component {
                             onChange={this.handleGameTitleChange}
                         ></input>
                     </div>
+
+                    {/* Game Year */}
                     <div className='form-group'>
                         <label>Game Year</label>
                         <input
@@ -109,6 +115,8 @@ class Edit extends React.Component {
                             onChange={this.handleGameYearChange}
                         ></input>
                     </div>
+
+                    {/* Game Cover */}
                     <div className='form-group'>
                         <label>Game Cover</label>
                         <textarea
@@ -118,6 +126,8 @@ class Edit extends React.Component {
                             onChange={this.handleGameCoverChange}
                         ></textarea>
                     </div>
+
+                    {/* Game Review */}
                     <div className='form-group'>
                         <label>Game Review</label>
                         <textarea
@@ -127,54 +137,57 @@ class Edit extends React.Component {
                             onChange={this.handleGameReviewChange}
                         ></textarea>
                     </div>
-                    <div className="radio">
+
+                    {/* Game Rating Radio */}
+                    <div className="radio" style={radioStyle}>
                         <label>
                             <input type="radio" value="1"
                                 checked={this.state.selectedOption === "1"}
                                 onChange={this.handleGameRatingChange} />
-                            1 Star
-                    </label>
-                    </div>
-                    <div className="radio">
+                            1 <img src={starpic}>{" "}</img>
+
+                        </label>
                         <label>
                             <input type="radio" value="2"
                                 checked={this.state.selectedOption === "2"}
                                 onChange={this.handleGameRatingChange} />
-                            2 Star
-                    </label>
-                    </div>
-                    <div className="radio">
+                            2 <img src={starpic}>{" "}</img>
+
+                        </label>
                         <label>
                             <input type="radio" value="3"
                                 checked={this.state.selectedOption === "3"}
                                 onChange={this.handleGameRatingChange} />
-                            3 Star
-                    </label>
-                    </div>
-                    <div className="radio">
+                            3 <img src={starpic}>{" "}</img>
+
+                        </label>
                         <label>
                             <input type="radio" value="4"
                                 checked={this.state.selectedOption === "4"}
                                 onChange={this.handleGameRatingChange} />
-                            4 Star
-                    </label>
-                    </div>
-                    <div className="radio">
+                            4 <img src={starpic}>{" "}</img>
+
+                        </label>
                         <label>
                             <input type="radio" value="5"
                                 checked={this.state.selectedOption === "5"}
                                 onChange={this.handleGameRatingChange} />
-                            5 Star
-                    </label>
+                            5 <img src={starpic}>{" "}</img>
+
+                        </label>
                     </div>
+
+                    {/* Game Submit */}
                     <div>
                         <input
                             type="submit"
                             value="Add Game"
                         ></input>
                     </div>
+
                 </form>
             </div>
+
         )
     }
 }
