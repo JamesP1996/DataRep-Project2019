@@ -16,7 +16,7 @@ class GameItem extends React.Component {
 
 
     DeleteGame(e) {
-        console.log("Deleting" + this.props.game._id);
+        console.log("Deleting " + this.props.game._id + " " + this.props.game.title);
         axios.delete("http://localhost:4000/api/games/" + this.props.game._id)
             .then(window.location.reload(false))
             .catch(console.log("Game Item Could not Be Deleted"));
