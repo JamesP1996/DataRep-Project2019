@@ -13,7 +13,7 @@ export class Home extends Component {
         return (
             <div id="parent" >
                 <h1>Geek Reviews!</h1>
-                <h8>Welcome to Geek Reviews, Your Latest Game Reviews!</h8>
+                <h5>Welcome to Geek Reviews, Your Latest Game Reviews!</h5>
                 <div style={bg}>
 
 

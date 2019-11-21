@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import starpic from '../Assets/Star.png'
+import starpic from '../Assets/Star.png';
 import '../App.css';
 
 class GameItem extends React.Component {

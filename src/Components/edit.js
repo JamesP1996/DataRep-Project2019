@@ -11,7 +11,8 @@ class Edit extends React.Component {
             Year: '',
             Cover: '',
             Review: '',
-            Rating: ''
+            Rating: '',
+            _id: ''
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -24,20 +25,20 @@ class Edit extends React.Component {
     }
 
     componentDidMount() {
-        alert(this.props.match.params.id);
+        alert("Editing Game ID: " + this.props.match.params.id);
 
         axios.get('http://localhost:4000/api/games/' + this.props.match.params.id)
             .then((response) => {
                 this.setState({
                     _id: response.data._id,
-                    Titlle: response.data.title,
+                    Title: response.data.title,
                     Year: response.data.year,
                     Cover: response.data.cover,
                     Review: response.data.review,
                     Rating: response.data.rating
                 })
             })
-            .catch(console.log("Could Not Gather Reponse"));
+            .catch();
     }
 
     handleGameTitleChange(e) {
@@ -70,26 +71,27 @@ class Edit extends React.Component {
             year: this.state.Year,
             cover: this.state.Cover,
             review: this.state.Review,
-            rating: this.state.rating
+            rating: this.state.Rating
         };
 
-        axios.put('http://localhost:4000/api/movies' + this.state._id, newGame)
+        axios.put('http://localhost:4000/api/games/' + this.state._id,
+            newGame)
             .then()
             .catch();
 
         this.setState({
-            title: '',
-            year: '',
-            cover: '',
-            review: '',
-            rating: ''
+            Title: '',
+            Year: '',
+            Cover: '',
+            Review: '',
+            Rating: ''
         });
     }
 
     render() {
         return (
             <div>
-                <h1>Create Component</h1>
+                <h1>Edit Component</h1>
                 <form onSubmit={this.handleSubmit}>
 
                     {/* Game Title */}
@@ -153,7 +155,7 @@ class Edit extends React.Component {
                     <div>
                         <input
                             type="submit"
-                            value="Add Game"
+                            value="Submit Change"
                         ></input>
                     </div>
 
