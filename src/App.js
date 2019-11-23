@@ -20,9 +20,12 @@ function App() {
           <Nav className="mr-auto">
             {/* Navbar Image and Links for Pages*/}
             <img src={icon} alt="Game Icon" height="40" width="40"></img>
+
+
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/readgame">Read Reviews</Nav.Link>
             <Nav.Link href="/creategame">Create Reviews</Nav.Link>
+
 
 
 
@@ -38,8 +41,12 @@ function App() {
           <Route path="/edit/:id" component={EditGame} />
 
         </Switch>
+
+
       </div>
     </Router>
+
+
   );
 }
 
