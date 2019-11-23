@@ -30,6 +30,7 @@
   height: 100vh;
   min-height: '100vh';
 }
+
 #twitch{
 width: 50%;
 height: auto;
@@ -46,6 +47,7 @@ border: 6px solid maroon ;
   height: 100vh;
   min-height: '100vh';
 }
+
 #edit{
   background: url("./Assets/bg.jpg") ;
   color: white;
@@ -90,6 +92,7 @@ border: 6px solid maroon ;
 .main-div{
   background-color: white;
 }
+
 #navbar-custom{
   background-color: maroon !important; 
   padding: 5px;
@@ -104,9 +107,11 @@ border: 6px solid maroon ;
   height: auto;
   padding: 10px;
 }
+
 #Card{
   max-height: 1000px;
 }
+
 #CardHead{
   background-color: crimson;
   color: white;
@@ -115,6 +120,7 @@ border: 6px solid maroon ;
   font-size: 1.5rem;
   
 }
+
 #rate{
   height: 1.5rem;
  
@@ -126,6 +132,7 @@ border: 6px solid maroon ;
   color:white;
   background: black;
 }
+
 #span{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
  
