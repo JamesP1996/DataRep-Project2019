@@ -9,13 +9,13 @@ import '../App.css';
 class GameItem extends React.Component {
 
 
-
+    //Setting Up Constructor Along With Delete Ability
     constructor() {
         super();
         this.DeleteGame = this.DeleteGame.bind(this);
     }
 
-
+    //Delete Game From Server Based off the Games Object ID
     DeleteGame(e) {
         alert("Deleting Game ID: " + this.props.game._id + " " + this.props.game.title);
         axios.delete("http://localhost:4000/api/games/" + this.props.game._id)
@@ -26,7 +26,9 @@ class GameItem extends React.Component {
 
     render() {
         return (
-            <li>
+            /* Create Card Object in a List Format so it can be put onto Read UL HTML 
+            Propogate the JSX HTML Card Fields With Data From The Server and Then Have a Delete Button and Edit Button on The Bottom */
+            < li >
                 <div className="col-sm-12 col-lg-6">
                     <Card className="Card h-100" border="secondary" style={{ width: '25rem' }}>
                         <Card.Header id="CardHead">{this.props.game.title}</Card.Header>
@@ -47,7 +49,7 @@ class GameItem extends React.Component {
                         <Link to={"/edit/" + this.props.game._id} className="btn btn-warning">Edit</Link>
                     </Card>
                 </div >
-            </li>
+            </li >
         )
     }
 }

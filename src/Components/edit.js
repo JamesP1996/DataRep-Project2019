@@ -6,7 +6,7 @@ import '../App.css';
 class Edit extends React.Component {
     constructor(props) {
         super(props);
-
+        //Make Empty Game Object Field State
         this.state = {
             Title: '',
             Year: '',
@@ -15,7 +15,7 @@ class Edit extends React.Component {
             Rating: '',
             _id: ''
         };
-
+        // Bind this state to Functions to Handle The Changes of Each Field
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleGameTitleChange = this.handleGameTitleChange.bind(this);
         this.handleGameYearChange = this.handleGameYearChange.bind(this);
@@ -24,7 +24,7 @@ class Edit extends React.Component {
         this.handleGameRatingChange = this.handleGameRatingChange.bind(this);
 
     }
-
+    // If Component Mounted Successfully grab Data from Server and Alert User of the Game Object ID they are editing
     componentDidMount() {
         alert("Editing Game ID: " + this.props.match.params.id);
 
@@ -67,12 +67,12 @@ class Edit extends React.Component {
     handleGameRatingChange(e) {
         this.setState({ Rating: e.target.value });
     }
-
+    //Submit the Changes That the Handle Functions Above Have Created
     handleSubmit(e) {
         alert(this.state.Title + "  " + this.state.Year + "  " + this.state.Cover + "  " + this.state.Review + "  " + this.state.Rating);
         e.preventDefault();
 
-
+        //Create New Game Object
         const newGame = {
             title: this.state.Title,
             year: this.state.Year,
@@ -85,7 +85,7 @@ class Edit extends React.Component {
             newGame)
             .then()
             .catch();
-
+        //Set State of Game Fields
         this.setState({
             Title: '',
             Year: '',
@@ -135,6 +135,7 @@ class Edit extends React.Component {
                             value={this.state.Cover}
                             onChange={this.handleGameCoverChange}
                         ></textarea>
+                        {/* Added a IMG Tag to display if the Image URL has worked as you change it and To give user idea of picture they inputted */}
                         <img src={this.state.Cover} onChange={this.handleGameCoverChange} style={{ height: 150, width: 150, padding: 10 }}></img>
                     </div>
 

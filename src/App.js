@@ -15,9 +15,10 @@ function App() {
     <Router>
       <div className="App">
 
-
+        {/* Setup Navbar with a Css Value in this case maroon */}
         <Navbar id="navbar-custom" variant="dark">
           <Nav className="mr-auto">
+            {/* Navbar Image and Links for Pages*/}
             <img src={icon} alt="Game Icon" height="40" width="40"></img>
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/read">Read Reviews</Nav.Link>
@@ -27,7 +28,8 @@ function App() {
 
           </Nav>
         </Navbar>
-
+        {/* Set up Routing using Switch and 
+         Router Modules that will make routes to each Component*/}
         <Switch>
 
           <Route path='/' component={Home} exact />

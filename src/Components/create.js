@@ -8,7 +8,7 @@ import '../App.css'
 export class Create extends React.Component {
     constructor(props) {
         super(props);
-
+        //Create Game State Object
         this.state = {
             Title: '',
             Year: '',
@@ -16,7 +16,7 @@ export class Create extends React.Component {
             Review: '',
             Rating: ''
         };
-
+        //Bind this Game Object to Handle's of the Various Fields on Change/Submit
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleGameTitleChange = this.handleGameTitleChange.bind(this);
         this.handleGameYearChange = this.handleGameYearChange.bind(this);
@@ -45,12 +45,12 @@ export class Create extends React.Component {
         this.setState({ Rating: e.target.value });
 
     }
-
+    //Once Submitted Alert User of Fields Inputted
     handleSubmit(e) {
         alert(this.state.Title + "  " + this.state.Year + "  " + this.state.Cover + "  " + this.state.Review + "  " + this.state.Rating);
         e.preventDefault();
 
-
+        //Create New Game Object
         const newGame = {
             title: this.state.Title,
             year: this.state.Year,
@@ -58,11 +58,12 @@ export class Create extends React.Component {
             review: this.state.Review,
             rating: this.state.Rating
         };
+        //Post to Server
         axios.post('http://localhost:4000/api/games', newGame)
             .then()
             .catch(console.log("Game Review Could Not Be Uploaded"));
 
-
+        //Set State Object of Game
         this.setState({
             title: '',
             year: '',
@@ -111,6 +112,7 @@ export class Create extends React.Component {
                             value={this.state.Cover}
                             onChange={this.handleGameCoverChange}
                         ></textarea>
+                        {/* Added Image to Display What URL image will show as user enters it. Helps User Understand What they are inputting as the Image */}
                         <img src={this.state.Cover} onChange={this.handleGameCoverChange} style={{ height: 150, width: 150, padding: 10 }}></img>
                     </div>
 

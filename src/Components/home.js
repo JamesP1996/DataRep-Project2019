@@ -2,13 +2,6 @@ import React, { Component } from "react";
 import '../App.css'
 import { TwitchStream } from 'react-twitch-stream';
 
-
-
-const bg = {
-    background: 'maroon',
-    color: 'white'
-};
-
 export class Home extends Component {
 
     constructor() {
@@ -26,6 +19,8 @@ export class Home extends Component {
             <div id="home" >
                 <h1 style={{ backgroundColor: 'rgba(128,0,0,0.8)' }}>Geek Reviews!</h1>
                 <h5 style={{ backgroundColor: 'rgba(128,0,0,0.8)' }}>Welcome to Geek Reviews, Your Latest Game Reviews!</h5>
+                {/* Setting up a Twitch Stream Player with OnChange Value Input  
+                You type in a Streamers Channel Name and it will Automatically Play That Stream*/}
                 <div id="twitch">
                     <TwitchStream channelName={this.state.Stream} allowFullScreen autoPlay muted />
                 </div>
