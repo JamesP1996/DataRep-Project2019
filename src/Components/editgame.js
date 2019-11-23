@@ -3,7 +3,7 @@ import axios from 'axios';
 import '../App.css';
 
 
-class Edit extends React.Component {
+class EditGame extends React.Component {
     constructor(props) {
         super(props);
         //Make Empty Game Object Field State
@@ -179,4 +179,4 @@ class Edit extends React.Component {
     }
 }
 
-export default Edit;
+export default EditGame;

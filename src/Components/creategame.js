@@ -5,7 +5,7 @@ import '../App.css'
 
 
 
-export class Create extends React.Component {
+export class CreateGame extends React.Component {
     constructor(props) {
         super(props);
         //Create Game State Object
@@ -155,4 +155,4 @@ export class Create extends React.Component {
     }
 }
 
-export default Create;
+export default CreateGame;

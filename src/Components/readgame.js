@@ -5,7 +5,7 @@ import '../App.css';
 
 
 
-export class Read extends React.Component {
+export class ReadGame extends React.Component {
     //Make a Empty State Array of Games
     state = {
         games: []
@@ -43,4 +43,4 @@ export class Read extends React.Component {
     }
 }
 
-export default Read;
+export default ReadGame;
