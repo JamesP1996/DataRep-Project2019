@@ -1,5 +1,9 @@
 import React from 'react';
 import axios from 'axios';
+import '../App.css'
+
+
+
 
 export class Create extends React.Component {
     constructor(props) {
@@ -70,9 +74,9 @@ export class Create extends React.Component {
     }
     render() {
         return (
-            <div>
-                <h1>Create Component</h1>
-                <form onSubmit={this.handleSubmit}>
+            <div id="create" >
+                <h1 style={{ backgroundColor: 'rgba(128,0,0,0.8)' }}>Create a Game Review</h1>
+                <form onSubmit={this.handleSubmit} id="form">
 
                     {/* Game Title */}
                     <div className='form-group'>
@@ -82,6 +86,7 @@ export class Create extends React.Component {
                             className='form-control'
                             value={this.state.Title}
                             onChange={this.handleGameTitleChange}
+                            maxLength="32"
                         ></input>
                     </div>
 
@@ -89,10 +94,11 @@ export class Create extends React.Component {
                     <div className='form-group'>
                         <label>Game Year</label>
                         <input
-                            type='text'
+                            type='number'
                             className='form-control'
                             value={this.state.Year}
                             onChange={this.handleGameYearChange}
+                            max="2020"
                         ></input>
                     </div>
 
@@ -105,6 +111,7 @@ export class Create extends React.Component {
                             value={this.state.Cover}
                             onChange={this.handleGameCoverChange}
                         ></textarea>
+                        <img src={this.state.Cover} onChange={this.handleGameCoverChange} style={{ height: 150, width: 150, padding: 10 }}></img>
                     </div>
 
                     {/* Game Review */}
@@ -115,6 +122,7 @@ export class Create extends React.Component {
                             className='form-control'
                             value={this.state.Review}
                             onChange={this.handleGameReviewChange}
+                            maxLength="250"
                         ></textarea>
                     </div>
 
@@ -140,7 +148,7 @@ export class Create extends React.Component {
                     </div>
 
                 </form>
-            </div>
+            </div >
         );
     }
 }

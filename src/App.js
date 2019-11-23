@@ -20,8 +20,8 @@ function App() {
           <Nav className="mr-auto">
             <img src={icon} alt="Game Icon" height="40" width="40"></img>
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/read">Read</Nav.Link>
-            <Nav.Link href="/create">Create</Nav.Link>
+            <Nav.Link href="/read">Read Reviews</Nav.Link>
+            <Nav.Link href="/create">Create Reviews</Nav.Link>
 
 
 

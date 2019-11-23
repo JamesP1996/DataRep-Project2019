@@ -4,6 +4,7 @@ import axios from 'axios';
 import '../App.css';
 
 
+
 export class Read extends React.Component {
 
     state = {
@@ -25,12 +26,17 @@ export class Read extends React.Component {
     render() {
         return (
             <div id="read">
-                <h1><b>Game Reviews!!</b></h1>
-                <div id="readData">
-                    <Games myGames={this.state.games}></Games>
-                </div>
 
-            </div >
+                <div id="readData" >
+                    <h1 style={{ backgroundColor: 'rgba(128,0,0,0.8)' }}>Game Reviews</h1>
+                    <ul id="ListParent">
+
+                        <Games myGames={this.state.games}></Games>
+
+                    </ul>
+
+                </div >
+            </div>
 
         );
     }

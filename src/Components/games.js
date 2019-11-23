@@ -7,6 +7,7 @@ class Games extends React.Component {
         return this.props.myGames.map((game) => {
             return <GameItem key={game._id}
                 game={game}></GameItem>
+
         });
     }
 }

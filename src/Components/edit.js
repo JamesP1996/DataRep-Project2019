@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import '../App.css';
 
 
 class Edit extends React.Component {
@@ -27,6 +28,7 @@ class Edit extends React.Component {
     componentDidMount() {
         alert("Editing Game ID: " + this.props.match.params.id);
 
+
         axios.get('http://localhost:4000/api/games/' + this.props.match.params.id)
             .then((response) => {
                 this.setState({
@@ -37,8 +39,12 @@ class Edit extends React.Component {
                     Review: response.data.review,
                     Rating: response.data.rating
                 })
+
+
+
             })
             .catch();
+
     }
 
     handleGameTitleChange(e) {
@@ -51,6 +57,7 @@ class Edit extends React.Component {
 
     handleGameCoverChange(e) {
         this.setState({ Cover: e.target.value });
+
     }
 
     handleGameReviewChange(e) {
@@ -86,13 +93,14 @@ class Edit extends React.Component {
             Review: '',
             Rating: ''
         });
+
     }
 
     render() {
         return (
-            <div>
-                <h1>Edit Component</h1>
-                <form onSubmit={this.handleSubmit}>
+            <div id="edit">
+                <h1 style={{ backgroundColor: 'rgba(128,0,0,0.8)' }}>Edit Game</h1>
+                <form onSubmit={this.handleSubmit} id="form">
 
                     {/* Game Title */}
                     <div className='form-group'>
@@ -102,6 +110,7 @@ class Edit extends React.Component {
                             className='form-control'
                             value={this.state.Title}
                             onChange={this.handleGameTitleChange}
+                            maxLength="32"
                         ></input>
                     </div>
 
@@ -109,10 +118,11 @@ class Edit extends React.Component {
                     <div className='form-group'>
                         <label>Game Year</label>
                         <input
-                            type='text'
+                            type='number'
                             className='form-control'
                             value={this.state.Year}
                             onChange={this.handleGameYearChange}
+                            max="2020"
                         ></input>
                     </div>
 
@@ -125,6 +135,7 @@ class Edit extends React.Component {
                             value={this.state.Cover}
                             onChange={this.handleGameCoverChange}
                         ></textarea>
+                        <img src={this.state.Cover} onChange={this.handleGameCoverChange} style={{ height: 150, width: 150, padding: 10 }}></img>
                     </div>
 
                     {/* Game Review */}
@@ -135,6 +146,7 @@ class Edit extends React.Component {
                             className='form-control'
                             value={this.state.Review}
                             onChange={this.handleGameReviewChange}
+                            maxLength="250"
                         ></textarea>
                     </div>
 
@@ -160,7 +172,7 @@ class Edit extends React.Component {
                     </div>
 
                 </form>
-            </div>
+            </div >
 
         )
     }

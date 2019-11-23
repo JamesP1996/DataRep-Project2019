@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -21,9 +22,71 @@
   color: #09d3ac;
 }
 
-.body{
-  background-image: url("./Assets/bg.jpg") ;
+
+#home{
+  background: url("./Assets/bg.jpg") ;
+  color: white;
+  width: 200vh;
+  height: 100vh;
+  min-height: '100vh';
 }
+#twitch{
+width: 50%;
+height: auto;
+text-align: center;
+margin: auto;
+border: 6px solid maroon ;
+
+}
+
+#create {
+  background: url("./Assets/bg.jpg") ;
+  color: white;
+  width: 200vh;
+  height: 100vh;
+  min-height: '100vh';
+}
+#edit{
+  background: url("./Assets/bg.jpg") ;
+  color: white;
+  width: 200vh;
+  height: 100vh;
+  min-height: '100vh';
+}
+
+#form{
+  display: inline-block;
+  text-align: center;
+  width: 80vh;
+}
+
+
+#read{
+  background: url("./Assets/bg.jpg") ;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  background-size: auto;
+ 
+  
+}
+
+#read h1{
+  color: white;
+}
+
+#ListParent{
+  display: inline-flex;
+  flex-wrap: wrap;
+  
+}
+
+#ListParent li{
+  padding: 20px;
+  
+}
+
 .main-div{
   background-color: white;
 }
@@ -31,34 +94,34 @@
   background-color: maroon !important; 
 
 }
-#read{
-  background: url("./Assets/bg.jpg");
-  background-repeat: repeat-y;
-}
-#readData{
-  display:  inline-flex;
-  padding: 5px;
-  
-}
-
 #covers{
-  
   max-width:300px;
   max-height:250px;
   width: auto;
   height: auto;
+  padding: 10px;
 }
-
 #Card{
+  max-height: 1000px;
+}
+#CardHead{
   background-color: crimson;
   color: white;
   background: linear-gradient(to top, #ed213a, #93291e); 
   font-style: normal;
-  font-size: 20px;
+  font-size: 1.5rem;
+  
 }
 #rate{
   height: 1.5rem;
  
+}
+
+#rating{
+  width: 10vh;
+  margin: 10px;
+  color:white;
+  background: black;
 }
 #span{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
