@@ -106,7 +106,7 @@ export class CreateGame extends React.Component {
 
                     {/* Game Cover */}
                     <div className='form-group'>
-                        <label>Game Cover</label>
+                        <label>Game Cover <i>url</i></label>
                         <textarea
                             row='3'
                             className='form-control'

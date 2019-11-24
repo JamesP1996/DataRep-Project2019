@@ -99,7 +99,7 @@ class EditGame extends React.Component {
     render() {
         return (
             <div id="edit">
-                <h1 style={{ backgroundColor: 'rgba(128,0,0,0.8)' }}>Edit Game</h1>
+                <h1 style={{ backgroundColor: 'rgba(128,0,0,0.8)' }}>Edit Game Review</h1>
                 <form onSubmit={this.handleSubmit} id="form">
 
                     {/* Game Title */}
@@ -123,12 +123,13 @@ class EditGame extends React.Component {
                             value={this.state.Year}
                             onChange={this.handleGameYearChange}
                             max="2020"
+                            min="1958"
                         ></input>
                     </div>
 
                     {/* Game Cover */}
                     <div className='form-group'>
-                        <label>Game Cover</label>
+                        <label>Game Cover <i>url</i></label>
                         <textarea
                             row='3'
                             className='form-control'
