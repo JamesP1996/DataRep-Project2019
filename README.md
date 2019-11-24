@@ -1,4 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## CHECK [WIKI FOR MORE INFORMATION ](https://github.com/JamesP1996/DataRep-Project2019/wiki)
 
 ## Available Scripts
 
