@@ -100,6 +100,7 @@ export class CreateGame extends React.Component {
                             value={this.state.Year}
                             onChange={this.handleGameYearChange}
                             max="2020"
+                            min="1958"
                         ></input>
                     </div>
 
