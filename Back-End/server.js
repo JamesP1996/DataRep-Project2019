@@ -67,6 +67,17 @@ app.get('/api/games/:id', (req, res) => {
     })
 })
 
+//Grab ID Data from Api/Games
+app.get('/api/serach/games/:title', (req, res) => {
+    console.log(req.params.title);
+   
+    GameModel.find({ title: req.params.title }, (err, data) => {
+        res.json(data)
+        // if (err) return handleError(err);
+      
+      })
+})
+
 // Handle Delete Request
 app.delete('/api/games/:id', (req, res) => {
     console.log("Deleted Game ID ::" + req.params.id);
