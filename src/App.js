@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import { ReadGame } from "./components/readgame";
-import { CreateGame } from "./components/creategame";
+import { ReadGame } from "./Components/readgame";
+import { CreateGame } from "./Components/creategame";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav } from 'react-bootstrap';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Home } from './components/home';
+import { Home } from './Components/home.js';
 import icon from './Assets/navIcon.png';
-import EditGame from './components/editgame';
+import EditGame from './Components/editgame';
 
 
 function App() {
