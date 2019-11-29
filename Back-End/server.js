@@ -68,7 +68,7 @@ app.get('/api/games/:id', (req, res) => {
 })
 
 //Grab ID Data from Api/Games
-app.get('/api/search/games/:title', (req, res) => {
+app.get('/api/games/search/:title', (req, res) => {
     console.log(req.params.title);
 
     GameModel.find({ title: req.params.title }, (err, data) => {
